@@ -1,0 +1,31 @@
+{
+  "name": "node-jobs-api",
+  "version": "1.0.0",
+  "description": "Jobs Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aly Contreras",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.1.1",
+    "helmet": "^7.0.0",
+    "http-status-code": "^2.1.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "rate-limiter": "^0.2.0",
+    "swagger-ui-express": "^5.0.0",
+    "xss-clean": "^0.1.4",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
