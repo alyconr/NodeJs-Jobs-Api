@@ -36,7 +36,9 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send('<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f2f2f2; "><h1 style="text-align: center; margin-bottom: 20px; font-size: 50px; font-weight: bold; color: #3a3a3a; line-height: 1.2; style-decoration: none  ">Jobs API</h1><a style="text-align: center; margin-bottom: 20px; font-size: 20px; font-weight: bold; color: #3a3a3a; line-height: 1.2; " href="/api-docs">API Documentation</a></div>');
+  res.send(
+    '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f2f2f2; "><h1 style="text-align: center; margin-bottom: 20px; font-size: 50px; font-weight: bold; color: #3a3a3a; line-height: 1.2; text-decoration: none;  ">Jobs API</h1><a style="text-align: center; margin-bottom: 20px; font-size: 20px; font-weight: bold; color: #3a3a3a; line-height: 1.2; " href="/api-docs">API Documentation</a></div>'
+  );
 });
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
