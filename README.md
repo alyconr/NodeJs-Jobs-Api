@@ -1,4 +1,4 @@
-<div style="color: #blue" align="center">
+<div color="blue" align="center">
  <h1>Jobs Manager API</h1>
  </div>
 
