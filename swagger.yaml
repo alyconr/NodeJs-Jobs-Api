@@ -55,10 +55,10 @@ paths:
               allOf:
                 - $ref: '#/components/schemas/loginrequest'
                 - example:
-                    email: aly@gmail.com
+                    email: alyconr@gmail.com
                     password: Misceron123@
             example:
-              email: aly@gmail.com
+              email: alyconr@gmail.com
               password: Misceron123@
         required: true
       responses:
