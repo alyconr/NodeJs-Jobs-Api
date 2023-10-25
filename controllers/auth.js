@@ -42,14 +42,23 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
 
-  if (!req.headers.cookie) {
-    res.cookie("token", "logout", {
-      httpOnly: true,
-      expires: new Date(0),
-    });
-    return res.status(StatusCodes.OK).json({ msg: "user logged out" });
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer")) {
+    throw new UnauthenticatedError("Authentication invalid");
   }
-  
+  const token = authHeader.split(" ")[1]; //  the second element of the array is the token
+  try {
+    const payload = jwt.verify(token, process.env.JWT_SECRET); // verify the token
+    const { name, userId } = payload; // destructure the payload
+    req.user = { name, userId }; // assign the payload to the req.user
+    res.status(StatusCodes.OK).json({ name, userId });
+  } catch (error) {
+    throw new UnauthenticatedError("Authentication invalid");
+  }
+
+
+
+   
 }
 
 module.exports = {
