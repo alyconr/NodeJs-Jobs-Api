@@ -41,16 +41,15 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-  const { token } = req.cookies;
 
-  if (!token) {
-    throw new UnauthenticatedError("Not logged in");
+  if (!req.headers.cookie) {
+    res.cookie("token", "logout", {
+      httpOnly: true,
+      expires: new Date(0),
+    });
+    return res.status(StatusCodes.OK).json({ msg: "user logged out" });
   }
   
-  res.cookie("token", "logout", {
-    httpOnly: true,
-    expires: new Date(0),
-  })
 }
 
 module.exports = {
