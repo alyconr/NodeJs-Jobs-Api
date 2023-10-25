@@ -1,5 +1,5 @@
-<div color="blue" align="center">
- <h1>Jobs Manager API</h1>
+<div align="center">
+ <h1 style="font-size: 30px; color: #FF0000">Jobs Manager API</h1>
  </div>
 
 
