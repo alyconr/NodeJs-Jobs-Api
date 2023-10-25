@@ -42,13 +42,14 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
 
-if (!req.header.authorization) { // if there is no token in the header 
-  throw new UnauthenticatedError("Invalid token");
-}
-
-  res.status(StatusCodes.OK).json({ msg: "user logged out" });  
-
-
+  if (!req.headers.cookie) {
+    res.cookie("token", "logout", {
+      httpOnly: true,
+      expires: new Date(0),
+    });
+    return res.status(StatusCodes.OK).json({ msg: "user logged out" });
+  }
+  
 }
 
 module.exports = {
