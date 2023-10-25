@@ -4,7 +4,7 @@
   "description": "Jobs Api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "author": "Aly Contreras",
   "license": "ISC",
@@ -16,7 +16,7 @@
     "express-async-errors": "^3.1.1",
     "express-rate-limit": "^7.1.1",
     "helmet": "^7.0.0",
-    "http-status-code": "^2.1.0",
+    "http-status-codes": "^2.3.0",
     "joi": "^17.11.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.6.3",
