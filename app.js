@@ -37,7 +37,7 @@ app.use(
 
 app.get("/", (req, res) => {
   res.send(
-    '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 10px auto; background-color: #f2f2f2; "><h1 style="text-align: center; margin-bottom: 20px; font-size: 50px; font-weight: bold; color: #3a3a3a; line-height: 1.2; text-decoration: none;  ">Jobs API Manager</h1><a style="text-align: center; margin-bottom: 20px; font-size: 20px; font-weight: bold; color: #3a3a3a; line-height: 1.2; " href="/api-docs">API Documentation</a><h2>By <a href="https://github.com/AllyContreras">Aly Contreras</h2 </div>'
+    '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 200px 100px; background-color: #f2f2f2; "><h1 style="text-align: center; margin-bottom: 20px; font-size: 50px; font-weight: bold; color: #3a3a3a; line-height: 1.2; text-decoration: none;  ">Jobs API Manager</h1><a style="text-align: center; margin-bottom: 20px; font-size: 20px; font-weight: bold; color: #3a3a3a; line-height: 1.2; " href="/api-docs">API Documentation</a><h2>By <a style="text-align: center; margin-bottom: 20px; font-size: 20px; font-weight: bold; color: #3a3a3a; line-height: 1.2; text-decoration: none; " href="https://github.com/AllyContreras">Aly Contreras</h2 </div>'
   );
 });
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
