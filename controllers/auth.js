@@ -40,7 +40,21 @@ const login = async (req, res) => {
   res.status(StatusCodes.OK).json({ user: { name: user.name }, token });
 };
 
+const logout = async (req, res) => {
+  const { token } = req.cookies;
+
+  if (!token) {
+    throw new UnauthenticatedError("Not logged in");
+  }
+  
+  res.cookie("token", "logout", {
+    httpOnly: true,
+    expires: new Date(0),
+  })
+}
+
 module.exports = {
   register,
   login,
+  logout
 };
