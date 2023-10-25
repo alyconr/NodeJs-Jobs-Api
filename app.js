@@ -36,7 +36,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send('<div style="text-align:center, margin-top: 100px, margin-bottom: 100px"><h1>Jobs API</h1><a href="/api-docs">Api Documentation</a></div>');
+  res.send('<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; "><h1>Jobs API</h1><a href="/api-docs">Api Documentation</a></div>');
 });
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
