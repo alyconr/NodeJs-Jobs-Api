@@ -10,6 +10,10 @@ const xss = require("xss-clean");
 const rateLimiter = require("express-rate-limit");
 const helmet = require("helmet");
 
+const swaggerUI = require("swagger-ui-express");
+const YAML = require("yamljs");
+const swaggerDocument = YAML.load("./swagger.yaml");
+
 const connectDB = require("./db/connect");
 const autheticateUser = require("./middleware/authentication");
 
@@ -32,8 +36,10 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send('<h1>Jobs API</h1><a href="/api-docs">Documentation</a>');
+  res.send('<div style="text-align:center, margin-top: 100px, margin-bottom: 100px"><h1>Jobs API</h1><a href="/api-docs">Api Documentation</a></div>');
 });
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", autheticateUser, jobsRouter);
 
