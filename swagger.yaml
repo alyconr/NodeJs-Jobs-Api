@@ -27,7 +27,7 @@ paths:
                 - $ref: '#/components/schemas/RegisterUserRequest'
                 - example:
                     name: Aly
-                    email: aly@gmail.com
+                    email: alyconr@gmail.com
                     password: Misceron123@
             example:
               name: Aly
