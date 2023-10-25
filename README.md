@@ -27,6 +27,7 @@ Email Validation Regex
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 ```
 
+
 ## Register User
 
 * Validate - name, password with mongoose validation
@@ -54,9 +55,9 @@ const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@
 ## Security
 
 * X-XSS-Protection: 1; mode=block
-* Helmet
-* Rate Limiter
-* cors
+* Helmet: This package is used to secure your Express apps by setting various HTTP headers 
+* Rate Limiter: This express rate limiter is used to limit the number of requests to a certain endpoint.
+* cors: Cors is used to enable cross-origin resource sharing, which allows the server to make requests from one   origin to another.
 
 ## Swagger UI
 
