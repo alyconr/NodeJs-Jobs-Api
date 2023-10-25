@@ -4,8 +4,7 @@
   "description": "Jobs Api",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon -r dotenv/config ./app.js",
-    "start": "node ./app.js"
+    "start": "nodemon app.js"
   },
   "author": "Aly Contreras",
   "license": "ISC",
