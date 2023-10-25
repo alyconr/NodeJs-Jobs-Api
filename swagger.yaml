@@ -1,7 +1,11 @@
 openapi: 3.0.0
 info:
   title: Jobs-Manager-Api
-  contact: {}
+  description: This is a Jobs API Manager built with Node.js and Express. This API provides registration and login functionality for users. Additionally, it allows users to create, update, and delete job listings.  It shows how to validate Mongoose schemas and implement authentication using JSON Web Tokens (JWT). Furthermore, it can validate mongoose errors as duplicate emails and cast errors.  Security measures such as password hashing and salting are also implemented to ensure the safety of user data. Additionally, xss protection is implemented to prevent cross-site scripting attacks; helmet middleware is used to set various HTTP headers for enhanced security; rate limiter is implemented to prevent brute force attacks; and input validation is done to protect against malicious user inputs. These measures collectively strengthen the overall security of the application and safeguard user information from potential threats, and finally, CORS is implemented to restrict access to resources from different origins, reducing the risk of unauthorized access and data breaches. Moreover, the application utilizes encryption algorithms such as SSL/TLS to secure data transmission over networks, providing an extra layer of protection against eavesdropping and tampering. These security measures work together to create a robust defense system that ensures the confidentiality, integrity, and availability of user data.
+  contact:
+    name: Jeysson Aly Contreras
+    url: https://github.com/alyconr
+    email: alyconr@hotmail.com
   version: '1.0'
 servers:
   - url: https://jobs-manager-api-892z.onrender.com/api/v1
@@ -23,12 +27,12 @@ paths:
                 - $ref: '#/components/schemas/RegisterUserRequest'
                 - example:
                     name: Aly
-                    email: slyconr@gmail.com
-                    password: Pancra4239@
+                    email: aly@gmail.com
+                    password: Misceron123@
             example:
               name: Aly
-              email: slyconr@gmail.com
-              password: Pancra4239@
+              email: alyconr@gmail.com
+              password: Misceron123@
         required: true
       responses:
         '200':
@@ -51,11 +55,11 @@ paths:
               allOf:
                 - $ref: '#/components/schemas/loginrequest'
                 - example:
-                    email: caro@gmail.com
-                    password: Pancra4239@
+                    email: aly@gmail.com
+                    password: Misceron123@
             example:
-              email: caro@gmail.com
-              password: Pancra4239@
+              email: aly@gmail.com
+              password: Misceron123@
         required: true
       responses:
         '200':
