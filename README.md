@@ -1,4 +1,7 @@
-# Jobs Manager API Readme
+<div align="center">
+ <h1>Jobs Manager API</h1>
+ </div>
+
 
 The Jobs Manager API is a Node.js and Express-based application that provides user registration and login functionalities while allowing users to create, update, and delete job listings. It incorporates robust security measures, including Mongoose schema validation, JSON Web Tokens (JWT) for authentication, password hashing and salting, XSS protection, Helmet middleware for HTTP headers, rate limiting, input validation, CORS, and SSL/TLS encryption for data transmission security and handling of duplicate emails. The documentation is supported by Swagger UI.
 
