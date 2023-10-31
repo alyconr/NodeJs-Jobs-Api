@@ -183,6 +183,13 @@ The API is deployed using Render.com  and hosted on Render.com as a web service.
 
 The code for this project is available on GitHub: [https://github.com/alyconr/NodeJs-Jobs-Api](https://github.com/alyconr/NodeJs-Jobs-Api)
 
+
+## 👤 Author
+
+
+- GitHub: [@alyconr](https://github.com/alyconr)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jeysson-aly-contreras/)
+
 ## Contributing
 
 If you would like to contribute to the project, please read the [Contributing Guide](https://github.com/alyconr/NodeJs-Jobs-Api/blob/main/CONTRIBUTING.md).
