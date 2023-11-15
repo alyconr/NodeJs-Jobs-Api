@@ -202,7 +202,7 @@ components:
       example:
         name: Aly
         email: slyconr@gmail.com
-        password: Pancra4239@
+        password: Misceron@
     loginrequest:
       title: loginrequest
       required:
@@ -216,7 +216,7 @@ components:
           type: string
       example:
         email: caro@gmail.com
-        password: Pancra4239@
+        password: Misceron@
     CreateJobRequest:
       title: CreateJobRequest
       required:
